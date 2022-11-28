@@ -1,4 +1,5 @@
 FROM ubuntu:22.04
+LABEL org.opencontainers.image.source https://github.com/divvun/taskcluster-decision-task-image
 
 RUN apt-get update -q && apt-get install -qy --no-install-recommends \
         git \

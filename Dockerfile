@@ -8,7 +8,7 @@ RUN apt-get update -q && apt-get install -qy --no-install-recommends \
     && \
     rm -rf /var/lib/apt/lists/* && \
     python3 -m pip install \
-        # Output of "pip freeze" in a virtualenv after "pip install taskcluster"
+        # Output of "pip freeze" in a virtualenv after "pip install taskcluster pyyaml"
         aiohttp==3.8.3\
         aiosignal==1.3.1\
         async-timeout==4.0.2\
@@ -26,5 +26,6 @@ RUN apt-get update -q && apt-get install -qy --no-install-recommends \
         taskcluster-urls==13.0.1\
         urllib3==1.26.13\
         yarl==1.8.1\
+        PyYAML==6.0\
     && \
     python3 -c 'import taskcluster'  # check that it was installed correctly

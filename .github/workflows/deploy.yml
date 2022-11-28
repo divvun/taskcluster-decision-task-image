@@ -3,6 +3,10 @@ on:
     branches: [main]
     tags: ['*']
 
+permissions:
+  contents: read
+  packages: write
+
 name: Deploy
 
 jobs:
